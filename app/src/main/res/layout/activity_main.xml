@@ -1,0 +1,143 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!-- Imagen superior -->
+    <ImageView
+        android:id="@+id/img_github"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/githubimg"
+        android:contentDescription="@string/app_name" />
+
+    <!-- Grid de 3 columnas centrado -->
+    <GridLayout
+        android:id="@+id/gridButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:padding="16dp"
+        android:useDefaultMargins="true"
+        android:alignmentMode="alignMargins"
+        android:columnOrderPreserved="false"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/img_github"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Fila 1 -->
+        <Button
+            android:id="@+id/btn_llamada"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:background="@drawable/icon_phone"
+            android:backgroundTint="@color/color_default_button" />
+
+        <Button
+            android:id="@+id/btn_url"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:background="@drawable/icon_url"
+            android:backgroundTint="@color/color_default_button" />
+
+        <Button
+            android:id="@+id/btn_alarm"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:background="@drawable/icon_alarm"
+            android:backgroundTint="@color/color_default_button" />
+
+        <!-- Fila 2 -->
+        <Button
+            android:id="@+id/btn_ubicacion"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:background="@drawable/icon_ubi"
+            android:backgroundTint="@color/color_default_button" />
+
+        <Button
+            android:id="@+id/btn_dados"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:background="@drawable/icon_dados"
+            android:backgroundTint="@color/color_default_button" />
+
+        <Button
+            android:id="@+id/btn_chistes"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:background="@drawable/icon_chistes"
+            android:backgroundTint="@color/color_default_button" />
+
+
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btn_calculadora"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_margin="30dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:background="@drawable/bg_calculadora"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridButtons" />
+
+
+    <ImageView
+        android:id="@+id/btn_llamada_conf"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/bg_circle"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_conf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_calculadora" />
+
+    <ImageView
+        android:id="@+id/btn_info"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/bg_circle"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_calculadora" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,61 @@
+<resources>
+    <!-- Cadenas de texto de la aplicación -->
+    <string name="app_name">ActividadEvaluableTema2</string>
+    <string name="text_conf_title">Configuración de la aplicación</string>
+    <string name="text_conf_phone">Configurar número SOS</string>
+    <string name="text_conf_phone_selector">Número de teléfono:</string>
+    <string name="text_conf_btn_accept">Aceptar</string>
+    <string name="text_SOS">Llamar SOS</string>
+    <string name="text_conf_alarm">Configurar alarma</string>
+    <string name="text_conf_alarm_hour">Hora de la alarma:</string>
+    <string name="text_conf_alarm_minutes">Minutos de la alarma:</string>
+    <string name="text_conf_ubi_title">Configurar ubicación</string>
+    <string name="text_conf_ubi">Introducir ubicación:</string>
+    <string name="text_conf_spinner_title">Configuración de tiempo de espera</string>
+    <string name="text_conf_spinner">Tiempo de espera:</string>
+    <string name="text_info_title">Uso de la aplicación:</string>
+    <string name="text_goto_main">Volver al inicio</string>
+    <string name="text_info_content">
+        Esta aplicación permite realizar una llamada de emergencia a un número predefinido,
+        configurar una alarma y buscar una ubicación. Utiliza los botones en la pantalla
+        principal para acceder a cada función. Asegúrate de configurar el número de teléfono SOS,
+        la hora de la alarma y la ubicación antes de usar estas funciones.</string>
+
+    <!-- Fichero de preferencias compartidas -->
+    <string name="name_preferen_shared_fich">shared_fich</string>
+
+    <!-- Claves de las preferencias compartidas -->
+    <string name="name_shared_phone">phone_number</string>
+    <string name="msg_empty_phone">Debes introducir un teléfono válido</string>
+    <string name="msg_not_valid_phone">Teléfono no válido</string>
+    <string name="msg_new_phone">Debes poner un nuevo teléfono</string>
+    <string name="shared_prefs_file">sharedPrefs</string>
+    <string name="string_phone">phone</string>
+    <string name="hour_alarm">horaAlarma</string>
+    <string name="minutes_alarm">minutosAlarma</string>
+    <string name="string_ubi">ubi</string>
+
+    <string-array name="tiempos_array">
+        <item>@string/text_conf_spinner</item> <!-- Esto será el primero -->
+        <item>1 segundo</item>
+        <item>2 segundos</item>
+        <item>3 segundos</item>
+    </string-array>
+
+    <!-- Chistes -->
+    <string-array name="chistes_array">
+        <item>¿Cuál es el animal más antiguo? La cebra, porque está en blanco y negro.</item>
+        <item>¿Qué le dice una impresora a otra? ¿Esa hoja es tuya o es una copia?</item>
+        <item>¿Por qué las focas miran siempre hacia arriba? ¡Porque ahí están los focos!</item>
+        <item>¿Qué hace una abeja en el gimnasio? ¡Zum-ba!</item>
+        <item>¿Cuál es el café más peligroso del mundo? El ex-preso.</item>
+        <item>¿Qué le dice un semáforo a otro? No me mires, me estoy cambiando.</item>
+        <item>¿Por qué el libro de matemáticas estaba triste? Porque tenía demasiados problemas.</item>
+        <item>¿Qué hace una vaca cuando sale el sol? Sombra.</item>
+        <item>¿Cuál es el colmo de un electricista? Que no le sigan la corriente.</item>
+        <item>¿Qué le dice un techo a otro? Techo de menos.</item>
+    </string-array>
+
+    <string name="describe">Chicos de PMDM del Virgen del Carmen, soy Santi. Este ejemplo, te muestra un botón donde escuchar un chiste</string>
+
+</resources>
