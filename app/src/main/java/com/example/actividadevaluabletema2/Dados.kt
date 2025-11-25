@@ -1,5 +1,6 @@
 package com.example.actividadevaluabletema2
 
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,6 +21,25 @@ class Dados : AppCompatActivity() {
     private lateinit var prefs: SharedPreferences
     private var tiempoTirada: Int = 1000 // valor por defecto en milisegundos
 
+    private val mensajes = arrayOf(
+        "3 → ¡Haz una voltereta!",
+        "4 → Cuenta un chiste malo",
+        "5 → Baila 10 segundos",
+        "6 → Envía un emoji a un amigo",
+        "7 → Haz 5 flexiones",
+        "8 → Canta una canción corta",
+        "9 → Imita a un animal",
+        "10 → Haz una pose divertida",
+        "11 → Di tu comida favorita",
+        "12 → Haz 3 sentadillas",
+        "13 → Aplaude fuerte 5 veces",
+        "14 → Di un trabalenguas",
+        "15 → Haz una cara graciosa",
+        "16 → Da una vuelta sobre ti mismo",
+        "17 → Di tu número de la suerte",
+        "18 → ¡Premio! Puedes descansar 🎉"
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDadosBinding.inflate(layoutInflater)
@@ -30,6 +50,11 @@ class Dados : AppCompatActivity() {
         tiempoTirada = obtenerTiempoDesdePrefs()
 
         initEvent()
+
+        binding.btnVolverMain.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun initEvent() {
@@ -90,7 +115,9 @@ class Dados : AppCompatActivity() {
     }
 
     private fun viewResult() {
-        binding.txtResultado.text = sum.toString()
+        val index = sum - 3 // porque el array empieza en 0 y la suma mínima es 3
+        val mensaje = mensajes[index]
+        binding.txtResultado.text = mensaje
     }
 
     private fun obtenerTiempoDesdePrefs(): Int {

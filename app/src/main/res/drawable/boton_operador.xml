@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="1000dp"/>
+            <solid android:color="#FFD54F"/> <!-- dorado más claro -->
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="1000dp"/>
+            <solid android:color="@color/color_boton_operador_no_presionado"/>
+        </shape>
+    </item>
+</selector>

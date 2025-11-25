@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Estado presionado -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="1000dp"/>
+            <solid android:color="#5A5555"/> <!-- color mas claro al presionar -->
+        </shape>
+    </item>
+
+    <!-- Estado normal -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="1000dp"/>
+            <solid android:color="@color/color_boton_numero_no_presionado"/>
+        </shape>
+    </item>
+</selector>

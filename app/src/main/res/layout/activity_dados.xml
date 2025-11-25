@@ -49,8 +49,8 @@
 
     <TextView
         android:id="@+id/txt_resultado"
-        android:layout_width="177dp"
-        android:layout_height="73dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="0"
         android:textColor="@color/color_default_button"
         android:textSize="60sp"
@@ -61,5 +61,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagview_dado3"
         app:layout_constraintVertical_bias="0.511" />
+
+    <Button
+        android:id="@+id/btn_volver_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver al inicio"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/color_default_button"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/txt_resultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

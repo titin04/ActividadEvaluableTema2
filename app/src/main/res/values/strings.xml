@@ -16,10 +16,12 @@
     <string name="text_info_title">Uso de la aplicación:</string>
     <string name="text_goto_main">Volver al inicio</string>
     <string name="text_info_content">
-        Esta aplicación permite realizar una llamada de emergencia a un número predefinido,
-        configurar una alarma y buscar una ubicación. Utiliza los botones en la pantalla
-        principal para acceder a cada función. Asegúrate de configurar el número de teléfono SOS,
-        la hora de la alarma y la ubicación antes de usar estas funciones.</string>
+    Esta aplicación permite realizar una llamada de emergencia a un número predefinido,
+    configurar una alarma y mostrar una ubicación en el mapa. Además, incluye actividades
+    de entretenimiento como lanzar dados con retos asociados, escuchar chistes y usar una
+    calculadora. Desde la pantalla de configuración puedes establecer el número de teléfono SOS,
+    la ubicación y decidir qué botones mostrar en la pantalla principal.
+    </string>
 
     <!-- Fichero de preferencias compartidas -->
     <string name="name_preferen_shared_fich">shared_fich</string>
@@ -36,7 +38,7 @@
     <string name="string_ubi">ubi</string>
 
     <string-array name="tiempos_array">
-        <item>@string/text_conf_spinner</item> <!-- Esto será el primero -->
+        <item>@string/text_conf_spinner</item> <!-- Este será el primero -->
         <item>1 segundo</item>
         <item>2 segundos</item>
         <item>3 segundos</item>

@@ -5,4 +5,10 @@
     <color name="color_conf_text_fondo">#300A4B</color>
     <color name="color_conf_text">#434243</color>
     <color name="color_default_button">#664EA7</color>
+
+    <!-- Colores calculadora -->
+    <color name="color_boton_operador_no_presionado">#BF9E16</color>
+    <color name="color_boton_top_no_presionado">#9D9797</color>
+    <color name="color_boton_numero_no_presionado">#383434</color>
+
 </resources>

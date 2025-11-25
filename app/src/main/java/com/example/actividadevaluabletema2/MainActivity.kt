@@ -23,6 +23,12 @@ class MainActivity : AppCompatActivity() {
         val prefs = getSharedPreferences(getString(R.string.shared_prefs_file), Context.MODE_PRIVATE)
         val phoneKey = getString(R.string.string_phone)
 
+        // Establecer visibilidad de botones según las preferencias
+        val mostrarCalculadora = prefs.getBoolean("mostrar_calculadora", true)
+        val mostrarInformacion = prefs.getBoolean("mostrar_informacion", true)
+        binding.btnCalculadora.visibility = if (mostrarCalculadora) android.view.View.VISIBLE else android.view.View.GONE
+        binding.btnInfo.visibility = if (mostrarInformacion) android.view.View.VISIBLE else android.view.View.GONE
+
         /** Botón para ir al activity phone */
         binding.btnLlamada.setOnClickListener {
             val updatedPhone = prefs.getString(phoneKey, "") ?: ""
@@ -73,26 +79,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        /** Botón para ir a la configuración y borrar datos previos */
+        /** Botón para ir a la configuración */
         binding.btnLlamadaConf.setOnClickListener {
-            // Borrar los datos guardados en SharedPreferences
-            val sharedFich = getSharedPreferences(getString(R.string.shared_prefs_file), Context.MODE_PRIVATE)
-            val phoneKey = getString(R.string.string_phone)
-            val hourKey = getString(R.string.hour_alarm)
-            val minutesKey = getString(R.string.minutes_alarm)
-
-            val edit = sharedFich.edit()
-            edit.remove(phoneKey)
-            edit.remove(hourKey)
-            edit.remove(minutesKey)
-            edit.apply()
-
-            val intent = Intent(this, ConfActivity::class.java).apply {
-                addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
-                putExtra("back", true)
-            }
+            val intent = Intent(this, ConfActivity::class.java)
             startActivity(intent)
         }
+
 
         /** Botón para ir al activity info */
         binding.btnInfo.setOnClickListener {
@@ -102,22 +94,29 @@ class MainActivity : AppCompatActivity() {
 
         /** Botón para ir a la actividad de chistes */
         binding.btnChistes.setOnClickListener {
-            val intent = Intent(this, Chistes::class.java)
-            startActivity(intent)
+            val modo = prefs.getString("modo", "ninguno")
+            if (modo == "chistes") {
+                startActivity(Intent(this, Chistes::class.java))
+            } else {
+                Toast.makeText(this, "Activa el modo Chistes en configuración", Toast.LENGTH_SHORT).show()
+            }
         }
 
         /** Botón para ir a la actividad de dados */
         binding.btnDados.setOnClickListener {
-            val intent = Intent(this, Dados::class.java)
-            startActivity(intent)
+            val modo = prefs.getString("modo", "ninguno")
+            if (modo == "dados") {
+                startActivity(Intent(this, Dados::class.java))
+            } else {
+                Toast.makeText(this, "Activa el modo Dados en configuración", Toast.LENGTH_SHORT).show()
+            }
         }
 
         /** Botón para ir a la actividad de calculadora */
         binding.btnCalculadora.setOnClickListener {
-
+            val intent = Intent(this, Calculadora::class.java)
+            startActivity(intent)
         }
-
-
     }
 
     override fun onNewIntent(intent: Intent) {
@@ -146,4 +145,17 @@ class MainActivity : AppCompatActivity() {
             checkSelfPermission(Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+
+        val prefs = getSharedPreferences(getString(R.string.shared_prefs_file), Context.MODE_PRIVATE)
+
+        val mostrarCalculadora = prefs.getBoolean("mostrar_calculadora", true)
+        val mostrarInformacion = prefs.getBoolean("mostrar_informacion", true)
+
+        binding.btnCalculadora.visibility = if (mostrarCalculadora) android.view.View.VISIBLE else android.view.View.GONE
+        binding.btnInfo.visibility = if (mostrarInformacion) android.view.View.VISIBLE else android.view.View.GONE
+    }
+
 }

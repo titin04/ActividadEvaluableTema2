@@ -19,6 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ActividadEvaluableTema2">
         <activity
+            android:name=".Calculadora"
+            android:exported="false" />
+        <activity
             android:name=".Chistes"
             android:exported="false" />
         <activity

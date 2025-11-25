@@ -1,5 +1,6 @@
 package com.example.actividadevaluabletema2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -26,6 +27,11 @@ class Chistes : AppCompatActivity() {
         configureTextToSpeech()  //configuramos nuestro textToSpeech
         initHander()    //lanzaremos un hilo para el progressBar. No es necesario un hilo.
         initEvent()     //Implementación del botón.
+
+        binding.btnVolverMain.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun initHander() {
