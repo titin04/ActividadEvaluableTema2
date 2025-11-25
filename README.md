@@ -3,7 +3,27 @@
 ![Made with Kotlin](https://img.shields.io/badge/Made%20with-Kotlin-blue)
 ![Android Studio](https://img.shields.io/badge/IDE-Android%20Studio-green)
 
-Este proyecto forma parte de la “Actividad Evaluable del Tema 1” en el módulo de “Programación Multimedia y Dispositivos Móviles”. El objetivo principal ha sido diseñar y construir una aplicación funcional que permita al usuario configurar tres elementos clave: un número de teléfono, una hora de alarma y una ubicación personalizada. A partir de estos datos, la app ofrece accesos directos para realizar una llamada, abrir una URL, programar una alarma y visualizar la ubicación en un mapa.
+# DESCRIPCIÓN DEL PROYECTO
+
+Este proyecto forma parte de la **“Actividad Evaluable del Tema 2”** en el módulo de *Programación Multimedia y Dispositivos Móviles*.  
+El objetivo principal ha sido diseñar y construir una aplicación funcional y entretenida que permita al usuario configurar varios elementos clave:
+
+- **Número de teléfono SOS** → para realizar llamadas de emergencia.  
+- **Hora de alarma** → configurable desde la aplicación.  
+- **Ubicación personalizada** → para mostrar en el mapa.  
+- **Opciones de interfaz** → decidir qué botones aparecen en el menú principal (calculadora, información, chistes, dados).  
+- **Modo de entretenimiento** → seleccionar entre *Chistes* o *Dados* mediante radio buttons.
+
+A partir de estos datos y configuraciones, la aplicación ofrece accesos directos para:
+
+- Realizar una llamada de emergencia.  
+- Abrir una URL.  
+- Programar una alarma.  
+- Visualizar la ubicación en un mapa.  
+- Acceder a actividades de entretenimiento como **Chistes** y **Dados** (con retos asociados a la tirada).  
+- Usar una **Calculadora** con interfaz personalizada.
+
+La persistencia de datos se gestiona mediante **SharedPreferences**, garantizando que la configuración del usuario se mantenga entre sesiones.
 
 En este documento se podrá ver cómo he estructurado el proyecto, explicación de uso de código, errores que he cometido mientras picaba el código, funcionalidades que he utilizado, permisos personalizados y una conclusión.
 
