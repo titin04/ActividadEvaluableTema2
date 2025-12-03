@@ -577,5 +577,5 @@ viewBinding{
 ## Autor
 **Antonio José Marín Rueda** / aka **titin**  
 Proyecto evaluable para el módulo de **Programación multimedia y dispositivos móviles**.  
-Enlaces a los vídeos: [API21](https://youtu.be/RKl_J27db7k) | [Dispositivo físico](https://youtu.be/x_wPdcSpqaE)  
+Enlaces a los vídeos: [Vídeo]([https://youtu.be/RKl_J27db7k](https://www.youtube.com/watch?v=3S7aPWx4ph4)) 
 GitHub: [@titin04](https://github.com/titin04/)
